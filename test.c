@@ -1,11 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-  float temperature[5] = {25.2, 25.5, 25.1, 26.0, 25.8};
+  int x = 10;
+  int *p = &x;
 
-  for (int i = 0; i < 5; i++) {
-    printf("%.1f\n", temperature[i]);
-  }
+  printf("%d\n", x);  // 10
+  printf("%p\n", p);  // address of x
+  printf("%d\n", *p); // 10, dereference p
+
+  *p = 25;
+  printf("%d\n", x);
 
   return 0;
 }
